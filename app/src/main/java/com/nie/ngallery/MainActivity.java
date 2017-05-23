@@ -84,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Integer tag = (Integer) mViewPager.getChildAt(mViewPager.getCurrentItem()).getTag();
-                    Log.i("wwwwwwwwss", mViewPager.getCurrentItem()+ "------" + position+"_______"+tag);
+                    Log.i("wwwwwwwwss", mViewPager.getCurrentItem()+ "------" + position);
                     if ((mViewPager.getCurrentItem() ) == position) {
                         Toast.makeText(mContext, "点击的位置是:::"+position, Toast.LENGTH_SHORT).show();
                     }

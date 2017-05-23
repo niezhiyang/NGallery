@@ -4,10 +4,6 @@ import android.os.Build;
 import android.util.SparseArray;
 import android.view.View;
 
-/**
- * on 2017/5/23.
- * 类的描述:
- */
 
 public class AdapterBean {
     private View[] activeViews = new View[0];
@@ -21,7 +17,7 @@ public class AdapterBean {
 
     public void setViewTypeCount(int viewTypeCount) {
         if (viewTypeCount < 1) {
-            throw new IllegalArgumentException("Can't have a viewTypeCount < 1");
+            return;
         }
         //noinspection unchecked
         SparseArray<View>[] scrapViews = new SparseArray[viewTypeCount];
@@ -37,9 +33,6 @@ public class AdapterBean {
         return viewType >= 0;
     }
 
-    /**
-     * @return A view from the ScrapViews collection. These are unordered.
-     */
     View getScrapView(int position, int viewType) {
         if (viewTypeCount == 1) {
             return retrieveFromScrap(currentScrapViews, position);
@@ -49,11 +42,6 @@ public class AdapterBean {
         return null;
     }
 
-    /**
-     * Put a view into the ScrapViews list. These views are unordered.
-     *
-     * @param scrap The view to add
-     */
     void addScrapView(View scrap, int position, int viewType) {
         if (viewTypeCount == 1) {
             currentScrapViews.put(position, scrap);
@@ -66,9 +54,6 @@ public class AdapterBean {
         }
     }
 
-    /**
-     * Move all views remaining in activeViews to scrapViews.
-     */
     void scrapActiveViews() {
         final View[] activeViews = this.activeViews;
         final int[] activeViewTypes = this.activeViewTypes;

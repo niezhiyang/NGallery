@@ -1,4 +1,4 @@
-package com.nie.ngallery.adater;
+package com.nie.ngallerylibrary.adater;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

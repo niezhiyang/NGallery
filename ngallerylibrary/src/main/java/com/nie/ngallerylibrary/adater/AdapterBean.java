@@ -1,4 +1,4 @@
-package com.nie.ngallery.adater;
+package com.nie.ngallerylibrary.adater;
 
 import android.os.Build;
 import android.util.SparseArray;

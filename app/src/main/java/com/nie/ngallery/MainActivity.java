@@ -3,14 +3,15 @@ package com.nie.ngallery;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.nie.ngallery.adater.MyPageradapter;
+import com.nie.ngallerylibrary.GalleryViewPager;
+import com.nie.ngallerylibrary.ScalePageTransformer;
+import com.nie.ngallerylibrary.adater.MyPageradapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Log.i("wwwwwwwwss", mViewPager.getCurrentItem()+ "------" + position);
                     if ((mViewPager.getCurrentItem() ) == position) {
                         Toast.makeText(mContext, "点击的位置是:::"+position, Toast.LENGTH_SHORT).show();
                     }

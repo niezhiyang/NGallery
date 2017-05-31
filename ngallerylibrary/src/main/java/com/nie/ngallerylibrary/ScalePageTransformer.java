@@ -1,4 +1,4 @@
-package com.nie.ngallery;
+package com.nie.ngallerylibrary;
 
 import android.os.Build;
 import android.support.v4.view.ViewPager;
